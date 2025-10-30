@@ -3,8 +3,9 @@
 import { portfolioConfig } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,23 +32,23 @@ export function Header() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a
+          <Link
             href="#home"
             className="text-xl sm:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
           >
             {portfolioConfig.name}
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-1 lg:gap-2">
             {portfolioConfig.navigation.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="px-3 lg:px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -69,23 +70,23 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+        <Activity mode={isMobileMenuOpen ? "visible" : "hidden"}>
+          <div className="md:hidden py-4 border-t border-border transition-all duration-500">
             <ul className="flex flex-col gap-2">
               {portfolioConfig.navigation.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-4 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-        )}
+        </Activity>
       </nav>
     </header>
   );

@@ -1,16 +1,29 @@
 import { PortfolioConfig, Project, Review, Skill } from "@/types/portfolio";
 
 export const portfolioConfig: PortfolioConfig = {
-  name: "Your Name",
+  name: "Tanvirul Islam",
   title: "Full Stack Developer & UI/UX Enthusiast",
-  description: "I build exceptional digital experiences with modern technologies",
+  description:
+    "I build exceptional digital experiences with modern technologies",
   avatar: "/avatar.jpg",
   email: "tanvirulislam122519@gmail.com",
   location: "Your Location",
   socialLinks: [
-    { platform: "GitHub", url: "https://github.com/yourusername", icon: "Github" },
-    { platform: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "Linkedin" },
-    { platform: "Twitter", url: "https://twitter.com/yourusername", icon: "Twitter" },
+    {
+      platform: "GitHub",
+      url: "https://github.com/yourusername",
+      icon: "Github",
+    },
+    {
+      platform: "LinkedIn",
+      url: "https://linkedin.com/in/yourusername",
+      icon: "Linkedin",
+    },
+    {
+      platform: "Twitter",
+      url: "https://twitter.com/yourusername",
+      icon: "Twitter",
+    },
   ],
   navigation: [
     { label: "Home", href: "#home" },
@@ -38,7 +51,8 @@ export const projects: Project[] = [
   {
     id: "1",
     title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with payment integration, admin dashboard, and real-time inventory management.",
+    description:
+      "A full-featured e-commerce platform with payment integration, admin dashboard, and real-time inventory management.",
     image: "/projects/project1.jpg",
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     demoUrl: "https://demo.example.com",
@@ -48,7 +62,8 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "Task Management App",
-    description: "Collaborative task management application with real-time updates, team workspaces, and productivity analytics.",
+    description:
+      "Collaborative task management application with real-time updates, team workspaces, and productivity analytics.",
     image: "/projects/project2.jpg",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
     demoUrl: "https://demo.example.com",
@@ -58,7 +73,8 @@ export const projects: Project[] = [
   {
     id: "3",
     title: "Portfolio Generator",
-    description: "SaaS platform that helps developers create beautiful portfolio websites using customizable templates.",
+    description:
+      "SaaS platform that helps developers create beautiful portfolio websites using customizable templates.",
     image: "/projects/project3.jpg",
     technologies: ["Next.js", "Tailwind CSS", "Prisma", "Vercel"],
     demoUrl: "https://demo.example.com",
@@ -73,7 +89,8 @@ export const reviews: Review[] = [
     name: "John Smith",
     role: "Senior Developer",
     company: "Tech Corp",
-    content: "Outstanding work! The project was delivered on time with exceptional quality. Great communication throughout.",
+    content:
+      "Outstanding work! The project was delivered on time with exceptional quality. Great communication throughout.",
     avatar: "/avatars/avatar1.jpg",
     rating: 5,
   },
@@ -82,7 +99,8 @@ export const reviews: Review[] = [
     name: "Sarah Johnson",
     role: "Product Manager",
     company: "Startup Inc",
-    content: "Very professional and skilled developer. Brought creative solutions to complex problems. Highly recommended!",
+    content:
+      "Very professional and skilled developer. Brought creative solutions to complex problems. Highly recommended!",
     avatar: "/avatars/avatar2.jpg",
     rating: 5,
   },
@@ -91,7 +109,8 @@ export const reviews: Review[] = [
     name: "Michael Brown",
     role: "CTO",
     company: "Innovation Labs",
-    content: "Excellent technical skills and attention to detail. Made our vision come to life with clean, maintainable code.",
+    content:
+      "Excellent technical skills and attention to detail. Made our vision come to life with clean, maintainable code.",
     avatar: "/avatars/avatar3.jpg",
     rating: 5,
   },
