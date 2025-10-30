@@ -5,7 +5,7 @@ export const portfolioConfig: PortfolioConfig = {
   title: "Full Stack Developer & UI/UX Enthusiast",
   description: "I build exceptional digital experiences with modern technologies",
   avatar: "/avatar.jpg",
-  email: "your.email@example.com",
+  email: "tanvirulislam122519@gmail.com",
   location: "Your Location",
   socialLinks: [
     { platform: "GitHub", url: "https://github.com/yourusername", icon: "Github" },

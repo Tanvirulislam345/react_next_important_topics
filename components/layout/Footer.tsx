@@ -1,15 +1,23 @@
+"use client";
+
 import { portfolioConfig } from "@/data/portfolio";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import * as LucideIcons from "lucide-react";
+import { useEffect, useState } from "react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Github,
-  Linkedin,
-  Twitter,
+  Github: LucideIcons.Github,
+  Linkedin: LucideIcons.Linkedin,
+  Twitter: LucideIcons.Twitter,
   Mail,
 };
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="border-t border-border bg-background">
@@ -78,7 +86,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-sm text-center text-muted-foreground">
-            © {currentYear} {portfolioConfig.name}. All rights reserved.
+            © {currentYear || "2025"} {portfolioConfig.name}. All rights reserved.
           </p>
         </div>
       </div>
