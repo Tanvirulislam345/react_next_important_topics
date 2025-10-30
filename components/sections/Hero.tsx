@@ -1,6 +1,6 @@
 "use client";
 
-import { portfolioConfig } from "@/data/portfolio";
+import { portfolioConfig } from "@/lib/data/portfolio";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin } from "lucide-react";

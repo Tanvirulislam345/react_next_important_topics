@@ -1,6 +1,6 @@
 "use client";
 
-import { portfolioConfig } from "@/data/portfolio";
+import { portfolioConfig } from "@/lib/data/portfolio";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { Activity, useEffect, useState } from "react";

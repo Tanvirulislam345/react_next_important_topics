@@ -1,10 +1,15 @@
 "use client";
 
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { projects } from "@/data/portfolio";
+import { projects } from "@/lib/data/portfolio";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -81,7 +86,12 @@ export function Projects() {
 
               <CardFooter className="gap-2">
                 {project.demoUrl && (
-                  <Button variant="default" size="sm" asChild className="flex-1">
+                  <Button
+                    variant="default"
+                    size="sm"
+                    asChild
+                    className="flex-1"
+                  >
                     <a
                       href={project.demoUrl}
                       target="_blank"
@@ -93,7 +103,12 @@ export function Projects() {
                   </Button>
                 )}
                 {project.githubUrl && (
-                  <Button variant="outline" size="sm" asChild className="flex-1">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="flex-1"
+                  >
                     <a
                       href={project.githubUrl}
                       target="_blank"

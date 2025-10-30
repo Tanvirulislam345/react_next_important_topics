@@ -1,6 +1,6 @@
 "use client";
 
-import { portfolioConfig } from "@/data/portfolio";
+import { portfolioConfig } from "@/lib/data/portfolio";
 import { Mail } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { useEffect, useState } from "react";
@@ -86,7 +86,8 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-sm text-center text-muted-foreground">
-            © {currentYear || "2025"} {portfolioConfig.name}. All rights reserved.
+            © {currentYear || "2025"} {portfolioConfig.name}. All rights
+            reserved.
           </p>
         </div>
       </div>

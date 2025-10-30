@@ -1,7 +1,7 @@
 "use client";
 
 import { Section } from "@/components/ui/section";
-import { skills } from "@/data/portfolio";
+import { skills } from "@/lib/data/portfolio";
 import { motion } from "framer-motion";
 
 export function TechSlider() {

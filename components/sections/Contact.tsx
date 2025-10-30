@@ -5,17 +5,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { portfolioConfig } from "@/data/portfolio";
+import { portfolioConfig } from "@/lib/data/portfolio";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, Loader2, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { contactFormSchema, type ContactFormData } from "@/lib/validations/contact";
+import {
+  contactFormSchema,
+  type ContactFormData,
+} from "@/lib/validations/contact";
 import { useState } from "react";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const {
     register,
@@ -158,7 +163,9 @@ export function Contact() {
                     disabled={isSubmitting}
                   />
                   {errors.name && (
-                    <p className="text-sm text-destructive">{errors.name.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.name.message}
+                    </p>
                   )}
                 </div>
 
@@ -174,7 +181,9 @@ export function Contact() {
                     disabled={isSubmitting}
                   />
                   {errors.email && (
-                    <p className="text-sm text-destructive">{errors.email.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
 
@@ -190,7 +199,9 @@ export function Contact() {
                     disabled={isSubmitting}
                   />
                   {errors.message && (
-                    <p className="text-sm text-destructive">{errors.message.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.message.message}
+                    </p>
                   )}
                 </div>
 
@@ -206,7 +217,8 @@ export function Contact() {
                 {submitStatus === "error" && (
                   <div className="p-3 rounded-lg bg-destructive/10 text-destructive">
                     <span className="text-sm font-medium">
-                      Failed to send message. Please try again or email me directly.
+                      Failed to send message. Please try again or email me
+                      directly.
                     </span>
                   </div>
                 )}

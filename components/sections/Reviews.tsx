@@ -2,7 +2,7 @@
 
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { reviews } from "@/data/portfolio";
+import { reviews } from "@/lib/data/portfolio";
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 
