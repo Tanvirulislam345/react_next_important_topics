@@ -69,7 +69,7 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" className="bg-secondary/30">
+    <Section id="contact" className="bg-linear-to-tl from-blue-950/80 via-slate-900/90 to-indigo-950/80 dark:from-blue-950 dark:via-slate-950 dark:to-indigo-950">
       <SectionHeader
         title="Get In Touch"
         description="Have a project in mind? Let's work together"
@@ -85,8 +85,8 @@ export function Contact() {
           className="space-y-6"
         >
           <div>
-            <h3 className="text-2xl font-bold mb-4">Let's Talk</h3>
-            <p className="text-muted-foreground text-lg mb-8">
+            <h3 className="text-2xl font-bold mb-4 text-white">Let's Talk</h3>
+            <p className="text-gray-300 text-lg mb-8">
               I'm always open to discussing new projects, creative ideas, or
               opportunities to be part of your visions.
             </p>
@@ -95,14 +95,14 @@ export function Contact() {
           <Card>
             <CardContent className="pt-6 space-y-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Mail className="h-5 w-5" />
+                <div className="p-3 rounded-lg bg-blue-500/20">
+                  <Mail className="h-5 w-5 text-blue-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
+                  <h4 className="font-semibold mb-1 text-white">Email</h4>
                   <a
                     href={`mailto:${portfolioConfig.email}`}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     {portfolioConfig.email}
                   </a>
@@ -110,12 +110,12 @@ export function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <MapPin className="h-5 w-5" />
+                <div className="p-3 rounded-lg bg-blue-500/20">
+                  <MapPin className="h-5 w-5 text-blue-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold mb-1 text-white">Location</h4>
+                  <p className="text-gray-400">
                     {portfolioConfig.location}
                   </p>
                 </div>
@@ -125,7 +125,7 @@ export function Contact() {
 
           {/* Social Links */}
           <div>
-            <h4 className="font-semibold mb-3">Connect on Social</h4>
+            <h4 className="font-semibold mb-3 text-white">Connect on Social</h4>
             <div className="flex flex-wrap gap-3">
               {portfolioConfig.socialLinks.map((social) => (
                 <a
@@ -133,7 +133,7 @@ export function Contact() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg border border-border hover:bg-accent hover:border-foreground/20 transition-all text-sm font-medium"
+                  className="px-4 py-2 rounded-lg border border-blue-400/30 text-gray-300 hover:bg-blue-500/20 hover:border-blue-400/60 hover:text-white transition-all text-sm font-medium"
                 >
                   {social.platform}
                 </a>
@@ -153,7 +153,7 @@ export function Contact() {
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
+                  <label htmlFor="name" className="text-sm font-medium text-white">
                     Name <span className="text-destructive">*</span>
                   </label>
                   <Input
@@ -170,7 +170,7 @@ export function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
+                  <label htmlFor="email" className="text-sm font-medium text-white">
                     Email <span className="text-destructive">*</span>
                   </label>
                   <Input
@@ -188,7 +188,7 @@ export function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
+                  <label htmlFor="message" className="text-sm font-medium text-white">
                     Message <span className="text-destructive">*</span>
                   </label>
                   <Textarea

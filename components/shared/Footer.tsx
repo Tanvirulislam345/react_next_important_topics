@@ -20,20 +20,20 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-white/10 bg-slate-900">
       <div className="container-custom py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">{portfolioConfig.name}</h3>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <h3 className="text-xl font-bold text-white">{portfolioConfig.name}</h3>
+            <p className="text-sm text-gray-400 max-w-xs">
               {portfolioConfig.description}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -41,7 +41,7 @@ export function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     {item.label}
                   </a>
@@ -52,7 +52,7 @@ export function Footer() {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
               Connect
             </h4>
             <div className="flex gap-4">
@@ -64,7 +64,7 @@ export function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                     aria-label={social.platform}
                   >
                     <Icon className="h-5 w-5" />
@@ -72,10 +72,10 @@ export function Footer() {
                 ) : null;
               })}
             </div>
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-gray-400">
               <a
                 href={`mailto:${portfolioConfig.email}`}
-                className="hover:text-foreground transition-colors"
+                className="hover:text-white transition-colors"
               >
                 {portfolioConfig.email}
               </a>
@@ -84,8 +84,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-sm text-center text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="text-sm text-center text-gray-400">
             © {currentYear || "2025"} {portfolioConfig.name}. All rights
             reserved.
           </p>

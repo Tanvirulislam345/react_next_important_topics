@@ -30,7 +30,7 @@ const item = {
 
 export function Projects() {
   return (
-    <Section id="projects">
+    <Section id="projects" className="bg-linear-to-bl from-teal-950/80 via-slate-900/90 to-cyan-950/80 dark:from-teal-950 dark:via-slate-950 dark:to-cyan-950">
       <SectionHeader
         title="Featured Projects"
         description="A showcase of my recent work and side projects"
@@ -47,13 +47,13 @@ export function Projects() {
           <motion.div key={project.id} variants={item}>
             <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 group">
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden rounded-t-lg bg-secondary">
+              <div className="relative h-48 overflow-hidden rounded-t-lg bg-slate-700/30">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-4">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-gray-400">
                       Project Image
                     </p>
-                    <p className="text-xs text-muted-foreground mt-2">
+                    <p className="text-xs text-gray-500 mt-2">
                       {project.image}
                     </p>
                   </div>
@@ -66,13 +66,13 @@ export function Projects() {
               </div>
 
               <CardHeader>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">
                   {project.title}
                 </h3>
               </CardHeader>
 
               <CardContent className="flex-1">
-                <p className="text-muted-foreground mb-4">
+                <p className="text-gray-400 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

@@ -23,7 +23,7 @@ const item = {
 
 export function Reviews() {
   return (
-    <Section id="reviews" className="bg-secondary/30">
+    <Section id="reviews" className="bg-linear-to-tr from-pink-950/80 via-slate-900/90 to-purple-950/80 dark:from-pink-950 dark:via-slate-950 dark:to-purple-950">
       <SectionHeader
         title="Client Reviews"
         description="What people say about working with me"
@@ -44,17 +44,17 @@ export function Reviews() {
                   <div className="flex-1">
                     {/* Avatar placeholder */}
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-lg font-bold">
+                      <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center">
+                        <span className="text-lg font-bold text-pink-300">
                           {review.name.charAt(0)}
                         </span>
                       </div>
                       <div>
-                        <h4 className="font-semibold">{review.name}</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <h4 className="font-semibold text-white">{review.name}</h4>
+                        <p className="text-sm text-gray-400">
                           {review.role}
                         </p>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-xs text-gray-500">
                           {review.company}
                         </p>
                       </div>
@@ -71,12 +71,12 @@ export function Reviews() {
                       </div>
                     )}
                   </div>
-                  <Quote className="h-8 w-8 text-muted-foreground/20" />
+                  <Quote className="h-8 w-8 text-pink-400/20" />
                 </div>
               </CardHeader>
 
               <CardContent>
-                <p className="text-muted-foreground italic leading-relaxed">
+                <p className="text-gray-400 italic leading-relaxed">
                   "{review.content}"
                 </p>
               </CardContent>

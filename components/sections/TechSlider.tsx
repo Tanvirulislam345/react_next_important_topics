@@ -9,17 +9,17 @@ export function TechSlider() {
   const duplicatedSkills = [...skills, ...skills];
 
   return (
-    <Section className="py-12 overflow-hidden bg-secondary/20">
+    <Section className="py-12 overflow-hidden bg-linear-to-r from-emerald-950/80 via-slate-900/90 to-green-950/80 dark:from-emerald-950 dark:via-slate-950 dark:to-green-950">
       <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-center">
+        <h3 className="text-2xl font-bold text-center text-white">
           Technologies I Work With
         </h3>
 
         {/* Infinite Scrolling Animation */}
         <div className="relative">
           {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-secondary/20 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-secondary/20 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-slate-900 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-slate-900 to-transparent z-10" />
 
           <motion.div
             className="flex gap-8"
@@ -38,9 +38,9 @@ export function TechSlider() {
             {duplicatedSkills.map((skill, index) => (
               <div
                 key={`${skill.name}-${index}`}
-                className="flex-shrink-0 px-6 py-4 rounded-lg border border-border bg-card hover:bg-accent transition-colors"
+                className="px-6 py-4 rounded-lg border border-emerald-400/20 bg-slate-800/40 hover:bg-emerald-500/10 hover:border-emerald-400/40 transition-colors backdrop-blur-sm"
               >
-                <span className="text-sm font-medium whitespace-nowrap">
+                <span className="text-sm font-medium whitespace-nowrap text-gray-200">
                   {skill.name}
                 </span>
               </div>
@@ -50,8 +50,8 @@ export function TechSlider() {
 
         {/* Second row - reverse direction */}
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-secondary/20 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-secondary/20 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-slate-900 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-slate-900 to-transparent z-10" />
 
           <motion.div
             className="flex gap-8"
@@ -70,9 +70,9 @@ export function TechSlider() {
             {duplicatedSkills.map((skill, index) => (
               <div
                 key={`reverse-${skill.name}-${index}`}
-                className="flex-shrink-0 px-6 py-4 rounded-lg border border-border bg-card hover:bg-accent transition-colors"
+                className=" px-6 py-4 rounded-lg border border-emerald-400/20 bg-slate-800/40 hover:bg-emerald-500/10 hover:border-emerald-400/40 transition-colors backdrop-blur-sm"
               >
-                <span className="text-sm font-medium whitespace-nowrap">
+                <span className="text-sm font-medium whitespace-nowrap text-gray-200">
                   {skill.name}
                 </span>
               </div>

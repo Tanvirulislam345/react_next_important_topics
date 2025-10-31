@@ -25,7 +25,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
+          ? "bg-slate-900/80 backdrop-blur-lg border-b border-white/10"
           : "bg-transparent"
       )}
     >
@@ -34,7 +34,7 @@ export function Header() {
           {/* Logo */}
           <Link
             href="#home"
-            className="text-xl sm:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+            className="text-xl sm:text-2xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity"
           >
             {portfolioConfig.name}
           </Link>
@@ -45,7 +45,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="px-3 lg:px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
+                  className="px-3 lg:px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-md hover:bg-white/10"
                 >
                   {item.label}
                 </Link>
@@ -71,14 +71,14 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <Activity mode={isMobileMenuOpen ? "visible" : "hidden"}>
-          <div className="md:hidden py-4 border-t border-border transition-all duration-500">
+          <div className="md:hidden py-4 border-t border-white/10 transition-all duration-500">
             <ul className="flex flex-col gap-2">
               {portfolioConfig.navigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                    className="block px-4 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                   >
                     {item.label}
                   </Link>
