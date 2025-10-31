@@ -56,7 +56,7 @@ export function About() {
   }, {} as Record<string, string[]>);
 
   return (
-    <Section id="about" className="bg-linear-to-tl from-slate-100 via-gray-50 to-neutral-100 dark:from-slate-800 dark:via-gray-850 dark:to-neutral-800">
+    <Section id="about" className="bg-linear-to-tl from-orange-950/70 via-slate-900/90 to-rose-950/70 dark:from-orange-950/90 dark:via-slate-950 dark:to-rose-950/90">
       <SectionHeader
         title="About Me"
         description="Passionate about building exceptional digital experiences"
@@ -75,11 +75,11 @@ export function About() {
             <motion.div key={feature.title} variants={item}>
               <Card className="h-full hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 text-center space-y-4">
-                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <feature.icon className="h-6 w-6" />
+                  <div className="mx-auto w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center">
+                    <feature.icon className="h-6 w-6 text-orange-400" />
                   </div>
-                  <h3 className="font-semibold text-lg">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold text-lg text-white">{feature.title}</h3>
+                  <p className="text-sm text-gray-400">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -90,7 +90,7 @@ export function About() {
 
         {/* Skills Section */}
         <div className="space-y-8">
-          <h3 className="text-2xl font-bold text-center">
+          <h3 className="text-2xl font-bold text-center text-white">
             Skills & Technologies
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,7 +105,7 @@ export function About() {
                 >
                   <Card>
                     <CardContent className="pt-6">
-                      <h4 className="font-semibold mb-4 text-lg">{category}</h4>
+                      <h4 className="font-semibold mb-4 text-lg text-white">{category}</h4>
                       <div className="flex flex-wrap gap-2">
                         {categorySkills.map((skill) => (
                           <Badge key={skill} variant="secondary">

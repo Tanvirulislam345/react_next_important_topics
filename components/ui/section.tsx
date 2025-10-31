@@ -38,11 +38,11 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={cn("mb-12 text-center", className)}>
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
           {description}
         </p>
       )}
