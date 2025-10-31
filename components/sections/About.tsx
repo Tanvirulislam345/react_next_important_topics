@@ -56,7 +56,7 @@ export function About() {
   }, {} as Record<string, string[]>);
 
   return (
-    <Section id="about" className="bg-secondary/30">
+    <Section id="about" className="bg-linear-to-tl from-slate-100 via-gray-50 to-neutral-100 dark:from-slate-800 dark:via-gray-850 dark:to-neutral-800">
       <SectionHeader
         title="About Me"
         description="Passionate about building exceptional digital experiences"
