@@ -136,8 +136,9 @@ export function About() {
         <div className="space-y-8">
           <h3 className="text-2xl font-bold text-white mb-6">Experience</h3>
           <Accordion
-            type="multiple"
-            defaultValue={experienceData.map((exp) => exp.id)}
+            type="single"
+            defaultValue={experienceData[0]?.id}
+            collapsible
             className="space-y-8"
           >
             {experienceData.map((exp) => (
