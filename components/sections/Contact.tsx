@@ -69,7 +69,7 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" className="bg-linear-to-tl from-blue-950/80 via-slate-900/90 to-indigo-950/80 dark:from-blue-950 dark:via-slate-950 dark:to-indigo-950">
+    <Section id="contact" className="bg-black">
       <SectionHeader
         title="Get In Touch"
         description="Have a project in mind? Let's work together"
@@ -86,23 +86,23 @@ export function Contact() {
         >
           <div>
             <h3 className="text-2xl font-bold mb-4 text-white">Let's Talk</h3>
-            <p className="text-gray-300 text-lg mb-8">
+            <p className="text-gray-400 text-lg mb-8">
               I'm always open to discussing new projects, creative ideas, or
               opportunities to be part of your visions.
             </p>
           </div>
 
-          <Card>
+          <Card className="bg-gray-900 border-gray-800">
             <CardContent className="pt-6 space-y-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-blue-500/20">
-                  <Mail className="h-5 w-5 text-blue-400" />
+                <div className="p-3 rounded-lg bg-gray-800">
+                  <Mail className="h-5 w-5 text-gray-300" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1 text-white">Email</h4>
                   <a
                     href={`mailto:${portfolioConfig.email}`}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     {portfolioConfig.email}
                   </a>
@@ -110,8 +110,8 @@ export function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-blue-500/20">
-                  <MapPin className="h-5 w-5 text-blue-400" />
+                <div className="p-3 rounded-lg bg-gray-800">
+                  <MapPin className="h-5 w-5 text-gray-300" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1 text-white">Location</h4>
@@ -133,7 +133,7 @@ export function Contact() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg border border-blue-400/30 text-gray-300 hover:bg-blue-500/20 hover:border-blue-400/60 hover:text-white transition-all text-sm font-medium"
+                  className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800/50 text-gray-300 hover:bg-gray-800 hover:border-gray-600 hover:text-white transition-all text-sm font-medium"
                 >
                   {social.platform}
                 </a>
@@ -149,7 +149,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Card>
+          <Card className="bg-gray-900 border-gray-800">
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-2">
@@ -226,7 +226,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full"
+                  className="w-full bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-white transition-all duration-300 border-0"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
