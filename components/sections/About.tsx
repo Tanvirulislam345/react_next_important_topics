@@ -2,8 +2,6 @@
 
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { skills } from "@/lib/data/portfolio";
 import { motion } from "framer-motion";
 import { Code2, Palette, Rocket, Users } from "lucide-react";
 
@@ -47,17 +45,6 @@ const item = {
 };
 
 export function About() {
-  const skillsByCategory = skills.reduce(
-    (acc, skill) => {
-      if (!acc[skill.category]) {
-        acc[skill.category] = [];
-      }
-      acc[skill.category].push(skill.name);
-      return acc;
-    },
-    {} as Record<string, string[]>
-  );
-
   return (
     <Section id="about" className="bg-black">
       <SectionHeader
@@ -90,41 +77,6 @@ export function About() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Skills Section */}
-        <div className="space-y-8">
-          <h3 className="text-2xl font-bold text-center text-white">
-            Skills & Technologies
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(skillsByCategory).map(
-              ([category, categorySkills]) => (
-                <motion.div
-                  key={category}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Card className="h-full bg-gray-900 border-gray-800 hover:shadow-lg hover:shadow-orange-500/10 transition-all">
-                    <CardContent className="pt-6">
-                      <h4 className="font-semibold mb-4 text-lg text-white">
-                        {category}
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {categorySkills.map((skill) => (
-                          <Badge key={skill} variant="secondary">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              )
-            )}
-          </div>
-        </div>
       </div>
     </Section>
   );

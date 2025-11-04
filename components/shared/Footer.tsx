@@ -20,12 +20,14 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="border-t border-white/10 bg-slate-900">
+    <footer className="border-t border-gray-800  bg-linear-to-b from-gray-950 via-gray-900 to-gray-700">
       <div className="container-custom py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white">{portfolioConfig.name}</h3>
+            <h3 className="text-xl font-bold text-white">
+              {portfolioConfig.name}
+            </h3>
             <p className="text-sm text-gray-400 max-w-xs">
               {portfolioConfig.description}
             </p>
@@ -41,7 +43,7 @@ export function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-400 hover:text-orange-400 transition-colors"
                   >
                     {item.label}
                   </a>
@@ -55,7 +57,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
               Connect
             </h4>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {portfolioConfig.socialLinks.map((social) => {
                 const Icon = iconMap[social.icon];
                 return Icon ? (
@@ -64,7 +66,7 @@ export function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="h-10 w-10 flex items-center justify-center rounded-full border-2 border-gray-700 text-gray-400 bg-gray-800/50 hover:bg-linear-to-r hover:from-orange-500 hover:to-rose-500 hover:border-transparent hover:text-white transition-all duration-300"
                     aria-label={social.platform}
                   >
                     <Icon className="h-5 w-5" />
@@ -75,7 +77,7 @@ export function Footer() {
             <div className="text-sm text-gray-400">
               <a
                 href={`mailto:${portfolioConfig.email}`}
-                className="hover:text-white transition-colors"
+                className="hover:text-orange-400 transition-colors"
               >
                 {portfolioConfig.email}
               </a>
@@ -84,8 +86,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-sm text-center text-gray-400">
+        <div className="mt-12 pt-8 border-t border-gray-600">
+          <p className="text-sm text-center text-gray-200">
             © {currentYear || "2025"} {portfolioConfig.name}. All rights
             reserved.
           </p>

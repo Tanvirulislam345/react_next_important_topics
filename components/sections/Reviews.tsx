@@ -23,7 +23,7 @@ const item = {
 
 export function Reviews() {
   return (
-    <Section id="reviews" className="bg-linear-to-tr from-pink-950/80 via-slate-900/90 to-purple-950/80 dark:from-pink-950 dark:via-slate-950 dark:to-purple-950">
+    <Section id="reviews" className="bg-linear-to-b from-gray-950 via-gray-800 to-gray-700">
       <SectionHeader
         title="Client Reviews"
         description="What people say about working with me"
@@ -38,14 +38,14 @@ export function Reviews() {
       >
         {reviews.map((review) => (
           <motion.div key={review.id} variants={item}>
-            <Card className="h-full hover:shadow-lg transition-shadow">
+            <Card className="h-full bg-gray-900 border-gray-800 hover:shadow-lg hover:shadow-gray-900/50 hover:-translate-y-1 transition-all duration-500 ease-out">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     {/* Avatar placeholder */}
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center">
-                        <span className="text-lg font-bold text-pink-300">
+                      <div className="w-12 h-12 rounded-full bg-linear-to-r from-orange-500/20 to-rose-500/20 flex items-center justify-center border-2 border-orange-500/30">
+                        <span className="text-lg font-bold text-orange-300">
                           {review.name.charAt(0)}
                         </span>
                       </div>
@@ -65,13 +65,13 @@ export function Reviews() {
                         {Array.from({ length: review.rating }).map((_, i) => (
                           <Star
                             key={i}
-                            className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                            className="h-4 w-4 fill-orange-400 text-orange-400"
                           />
                         ))}
                       </div>
                     )}
                   </div>
-                  <Quote className="h-8 w-8 text-pink-400/20" />
+                  <Quote className="h-8 w-8 text-orange-400/20" />
                 </div>
               </CardHeader>
 
