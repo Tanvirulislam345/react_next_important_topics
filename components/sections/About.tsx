@@ -87,9 +87,57 @@ export function About() {
         description="Passionate about building exceptional digital experiences"
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-x-16 mt-12">
         {/* about description */}
-        <div></div>
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-white">Who I Am</h3>
+            <p className="text-gray-300 leading-relaxed text-justify">
+              I'm a passionate software engineer with a strong focus on building
+              scalable, maintainable, and user-centric applications. With years
+              of experience in full-stack development, I specialize in modern
+              web technologies and cloud-native solutions.
+            </p>
+            <p className="text-gray-300 leading-relaxed text-justify">
+              My expertise spans across frontend frameworks like React and
+              Next.js, backend technologies including Node.js, and cloud
+              platforms such as AWS. I'm dedicated to writing clean, efficient
+              code and following best practices in software architecture.
+            </p>
+            <p className="text-gray-300 leading-relaxed text-justify">
+              Beyond coding, I'm passionate about mentoring junior developers,
+              contributing to open-source projects, and staying updated with the
+              latest industry trends and technologies.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="text-xl font-semibold text-white">Core Skills</h4>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "JavaScript",
+                "TypeScript",
+                "React",
+                "Next.js",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "PostgreSQL",
+                "AWS",
+                "Docker",
+                "Git",
+                "REST APIs",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 text-sm bg-white/5 border border-white/10 rounded-full text-gray-300 hover:bg-white/10 transition-colors"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="space-y-8">
           <h3 className="text-2xl font-bold text-white mb-6">Experience</h3>
           {experienceData.map((exp) => (
