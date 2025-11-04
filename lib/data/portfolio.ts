@@ -2,12 +2,12 @@ import { PortfolioConfig, Project, Review, Skill } from "@/types/portfolio";
 import ProfileImage from "@/assets/Profile.jpeg";
 
 export const portfolioConfig: PortfolioConfig = {
-  name: "Tanvirul",
+  name: "Portfolio",
   title: "Front-End Tead & Software Engineer",
   description:
     "I build exceptional digital experiences with modern technologies",
   avatar: ProfileImage,
-  email: "tanvirulislam122519@gmail.com",
+  email: "demo@gmail.com",
   location: "Your Location",
   socialLinks: [
     {

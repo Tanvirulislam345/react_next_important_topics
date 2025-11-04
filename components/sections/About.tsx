@@ -28,7 +28,7 @@ interface Experience {
 const experienceData: Experience[] = [
   {
     id: "1",
-    companyName: "Mediusware",
+    companyName: "Company ABC Ltd.",
     location: "Dhaka, Bangladesh · On-site",
     duration: "Full-time · 3 yrs 1 mo",
     current: true,
@@ -51,7 +51,7 @@ const experienceData: Experience[] = [
   },
   {
     id: "2",
-    companyName: "Wizard Software Ltd.",
+    companyName: "Company XYZ Ltd.",
     location: "Dhaka, Bangladesh · On-site",
     duration: "Full-time · 3 yrs 1 mo",
     current: true,
