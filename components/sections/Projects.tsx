@@ -45,9 +45,9 @@ export function Projects() {
       >
         {projects.map((project) => (
           <motion.div key={project.id} variants={item}>
-            <Card className="h-full flex flex-col bg-gray-900 py-0 pb-6 border-gray-800 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group">
+            <Card className="h-full flex flex-col bg-gray-900 border-gray-800 overflow-hidden group hover:border-gray-700 hover:shadow-2xl hover:shadow-gray-900/50 hover:-translate-y-1 transition-all duration-500 ease-out py-0">
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden rounded-t-lg bg-gray-800">
+              <div className="relative h-48 overflow-hidden bg-gray-800 group-hover:bg-gray-750 transition-colors duration-500">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-4">
                     <p className="text-sm text-gray-400">Project Image</p>
@@ -57,26 +57,28 @@ export function Projects() {
                   </div>
                 </div>
                 {project.featured && (
-                  <Badge className="absolute top-4 right-4 z-10 bg-linear-to-r from-orange-500 to-rose-500 text-white border-0">
+                  <Badge className="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-sm text-white border border-white/20">
                     Featured
                   </Badge>
                 )}
               </div>
 
-              <CardHeader>
-                <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+              <CardHeader className="pb-3">
+                <h3 className="text-xl font-bold text-white transition-colors duration-300">
                   {project.title}
                 </h3>
               </CardHeader>
 
-              <CardContent className="flex-1">
-                <p className="text-gray-400 mb-4">{project.description}</p>
+              <CardContent className="flex-1 pb-4">
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <Badge
                       key={tech}
                       variant="outline"
-                      className="text-xs border-orange-500/30 text-gray-300 bg-orange-500/5"
+                      className="text-xs border-gray-700 text-gray-300 bg-gray-800/50 hover:bg-gray-800 transition-colors"
                     >
                       {tech}
                     </Badge>
@@ -84,13 +86,13 @@ export function Projects() {
                 </div>
               </CardContent>
 
-              <CardFooter className="gap-2 ">
+              <CardFooter className="gap-3 py-4 border-t border-gray-800">
                 {project.demoUrl && (
                   <Button
                     variant="default"
                     size="sm"
                     asChild
-                    className="flex-1 bg-linear-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white border-0"
+                    className="flex-1 bg-gray-800 text-gray-200 hover:bg-gray-700 border border-gray-600 hover:text-white transition-all duration-300 font-medium "
                   >
                     <a
                       href={project.demoUrl}
@@ -107,7 +109,7 @@ export function Projects() {
                     variant="outline"
                     size="sm"
                     asChild
-                    className="flex-1 border-gray-700 text-white hover:bg-gray-800 hover:border-gray-600"
+                    className="flex-1 bg-gray-800 text-gray-200 hover:bg-gray-700 border border-gray-600 hover:text-white transition-all duration-300 font-medium "
                   >
                     <a
                       href={project.githubUrl}
