@@ -25,8 +25,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-slate-900/80 backdrop-blur-lg border-b border-white/10"
-          : "bg-transparent"
+          ? "bg-gray-900/80 backdrop-blur-md shadow-md"
+          : " bg-gray-950"
       )}
     >
       <nav className="container-custom">
