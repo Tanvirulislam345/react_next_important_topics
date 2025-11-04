@@ -22,13 +22,13 @@ export function Hero() {
       className="min-h-[calc(100vh-5rem)] flex items-center bg-linear-to-b from-gray-950 via-gray-800 to-gray-700"
     >
       <div className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-6 sm:space-y-8"
+            className="space-y-6 sm:space-y-8 order-2 lg:order-1"
           >
             <div className="space-y-4">
               <motion.p
@@ -79,7 +79,7 @@ export function Hero() {
               <Button
                 size="lg"
                 asChild
-                className="bg-linear-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white border-0"
+                className="bg-linear-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white border-0 shadow-lg shadow-orange-500/25"
               >
                 <a href="#contact">Get In Touch</a>
               </Button>
@@ -87,7 +87,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-gray-700 text-white hover:bg-gray-800 hover:border-gray-600"
+                className="border-2 border-orange-500/50 text-white bg-orange-500/10 hover:bg-linear-to-r hover:from-orange-500 hover:to-rose-500 hover:border-transparent backdrop-blur-sm transition-all duration-300"
               >
                 <a href="#projects">View My Work</a>
               </Button>
@@ -103,7 +103,7 @@ export function Hero() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:bg-linear-to-r hover:from-orange-500 hover:to-rose-500 hover:border-transparent hover:text-white transition-all"
+                    className="h-10 w-10 flex items-center justify-center rounded-full border-2 border-orange-500/30 text-gray-300 bg-orange-500/5 hover:bg-linear-to-r hover:from-orange-500 hover:to-rose-500 hover:border-transparent hover:text-white hover:shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
                     aria-label={social.platform}
                   >
                     <Icon className="h-5 w-5" />
@@ -113,39 +113,24 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Visual Element - Image */}
+          {/* Avatar Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="relative lg:justify-self-end hidden lg:block"
+            className="order-1 lg:order-2"
           >
-            <div className="relative w-full max-w-md mx-auto lg:max-w-lg">
-              {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-linear-to-tr from-orange-500/20 to-rose-500/30 rounded-2xl blur-3xl animate-pulse" />
-
-              {/* Profile Image */}
-              <div className="relative aspect-square rounded-2xl border-2 border-gray-700 overflow-hidden bg-gray-800/50 backdrop-blur-sm">
+            <div className="w-full max-w-sm mx-auto lg:max-w-full">
+              <div className="aspect-square rounded-2xl border-none  overflow-hidden shadow-2xl shadow-orange-500/20">
                 <Image
-                  src="/profile.jpg"
+                  src={portfolioConfig.avatar}
                   alt={portfolioConfig.name}
-                  fill
-                  className="object-cover"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
                   priority
                 />
               </div>
-
-              {/* Decorative elements */}
-              <motion.div
-                animate={{ rotate: [12, 15, 12] }}
-                transition={{ repeat: Infinity, duration: 3 }}
-                className="absolute -top-4 -right-4 w-24 h-24 border-2 border-orange-500/30 rounded-2xl -z-10"
-              />
-              <motion.div
-                animate={{ rotate: [-6, -9, -6] }}
-                transition={{ repeat: Infinity, duration: 4 }}
-                className="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-rose-500/30 rounded-2xl -z-10"
-              />
             </div>
           </motion.div>
         </div>

@@ -41,11 +41,13 @@ export interface ContactFormData {
   message: string;
 }
 
+import { StaticImageData } from "next/image";
+
 export interface PortfolioConfig {
   name: string;
   title: string;
   description: string;
-  avatar: string;
+  avatar: string | StaticImageData;
   email: string;
   location: string;
   socialLinks: SocialLink[];
