@@ -121,7 +121,7 @@ export function Hero() {
             className="order-1 lg:order-2"
           >
             <div className="w-full max-w-sm mx-auto lg:max-w-full">
-              <div className="aspect-square rounded-2xl border-none  overflow-hidden shadow-2xl shadow-orange-500/20">
+              <div className="aspect-square rounded-2xl border-none overflow-hidden ">
                 <Image
                   src={portfolioConfig.avatar}
                   alt={portfolioConfig.name}
